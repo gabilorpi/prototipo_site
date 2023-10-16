@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-     <link rel="stylesheet" href="../projeto/style.css">
-     <title>Reserva de Passagens Aéreas</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../projeto/css/style.css">
+  <title>Reserva VOOS</title>
 </head>
 
 <body>
@@ -15,8 +15,11 @@
   <!-- Barra de menu -->
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="#">
+        <img src="../projeto/images/logotipo.jpg" alt="Logotipo da Sua Empresa">
+      </a>
+      <button class="btn btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+        aria-controls="offcanvasRight">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -37,7 +40,29 @@
       </div>
     </div>
   </nav>
-
+  <!-- Menu Lateral (Offcanvas) -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasRightLabel">Menu</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link" href="../projeto/index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../projeto/passagens.html">Passagens</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../projeto/hoteis.html">Hotéis</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../projeto/contato.html">Contato</a>
+        </li>
+      </ul>
+    </div>
+  </div>
   <!-- Carrossel -->
   <div id="carouselMain" class="carousel carousel-dark slide mt-1" data-bs-ride="carousel">
     <!-- Slides do carrossel -->
@@ -65,7 +90,7 @@
 
   <!-- Formulário de reserva de passagens aéreas -->
   <section class="container mt-4">
-    <h2>Reserva de Passagens Aéreas</h2>
+    <h2>Reservas De Voos</h2>
     <form>
       <div class="mb-3">
         <label for="origem" class="form-label">Origem</label>
@@ -77,17 +102,27 @@
       </div>
       <div class="row">
         <div class="col-md-6 mb-3">
-          <label for="dataSaida" class="form-label">Data de Saída</label>
-          <input type="date" class="form-control" id="dataSaida">
+          <label for="data decolagem" class="form-label">Data decolagem</label>
+          <input type="date" class="form-control" id="data decolagem">
+          <label for="data aterrissagem" class="form-label">Data aterrissagem</label>
+          <input type="date" class="form-control" id="data aterrissagem">
         </div>
         <div class="col-md-6 mb-3">
-          <label for="dataRetorno" class="form-label">Data de Retorno</label>
-          <input type="date" class="form-control" id="dataRetorno">
+          <label for="hora decolagem" class="form-label">Hora decolagem</label>
+          <input type="time" class="form-control" id="hora decolagem">
+          <label for="hora aterrissagem" class="form-label">Hora aterrissagem</label>
+          <input type="time" class="form-control" id="hora aterrissagem">
         </div>
       </div>
+
       <div class="mb-3">
-        <label for="quantidadePessoas" class="form-label">Quantidade de Pessoas</label>
-        <input type="number" class="form-control" id="quantidadePessoas" min="1" max="10">
+        <label for="formaPagamento" class="form-label">Forma de Pagamento</label>
+        <select class="form-select" id="formaPagamento">
+          <option value="dinheiro">Pix</option>
+          <option value="debito">Cartão de Débito</option>
+          <option value="credito">Cartão de Crédito</option>
+          <option value="paypal">PayPal</option>
+        </select>
       </div>
       <button type="submit" class="btn btn-primary">Enviar</button>
     </form>
@@ -101,9 +136,11 @@
           <img src="../projeto/images/marrocos.jpg" alt="Imagem 1" class="card-img-top">
           <div class="card-body">
             <h5 class="card-title">Marrocos </h5>
-            <h6 class="card-subtitle">13 de set 2023</h6><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-airplane-fill" viewBox="0 0 16 16">
-                <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z"/>
-              </svg>
+            <h6 class="card-subtitle">13 de set 2023</h6><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+              fill="currentColor" class="bi bi-airplane-fill" viewBox="0 0 16 16">
+              <path
+                d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z" />
+            </svg>
             <p class="card-text"> a partir de </p>
             <p class="card-text">R$:1.590 </p>
             <button class="btn btn-primary">Consultar</button>
@@ -115,8 +152,10 @@
           <img src="../projeto/images/japão.jpg" alt="Imagem 1" class="card-img-top">
           <div class="card-body">
             <h5 class="card-title">Japão</h5>
-            <h6 class="card-subtitle">20 de dez 2023</h6><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-airplane-fill" viewBox="0 0 16 16">
-              <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z"/>
+            <h6 class="card-subtitle">20 de dez 2023</h6><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+              fill="currentColor" class="bi bi-airplane-fill" viewBox="0 0 16 16">
+              <path
+                d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z" />
             </svg>
             <p class="card-text"> a partir de </p>
             <p class="card-text"> R$:2.500 </p>
@@ -129,8 +168,10 @@
           <img src="../projeto/images/cruzeiros.jpg" alt="Imagem 1" class="card-img-top">
           <div class="card-body">
             <h5 class="card-title">Cruzeiros</h5>
-            <h6 class="card-subtitle">15 de jul 2023</h6><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-airplane-fill" viewBox="0 0 16 16">
-              <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z"/>
+            <h6 class="card-subtitle">15 de jul 2023</h6><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+              fill="currentColor" class="bi bi-airplane-fill" viewBox="0 0 16 16">
+              <path
+                d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z" />
             </svg>
             <p class="card-text"> a partir de </p>
             <p class="card-text"> R$:5.500 </p>
@@ -143,7 +184,9 @@
           <i class="fas fa-plane fa-3x mb-3"></i>
           <span>VOOS!</span>
           <p>Aproveite nossas ofertas</p>
-          <p class="voos-text">Aproveite nossas promoções exclusivas e descontos especiais para economizar em suas próximas viagens. Nossa missão é fornecer-lhe as melhores ofertas sem comprometer a qualidade do serviço.!</p>
+          <p class="voos-text">Aproveite nossas promoções exclusivas e descontos especiais para economizar em suas
+            próximas viagens. Nossa missão é fornecer-lhe as melhores ofertas sem comprometer a qualidade do serviço.!
+          </p>
         </div>
       </div>
     </div>
@@ -151,20 +194,20 @@
 
   <!-- Formas de Pagamento -->
   <section class="container mt-4 fa-xs, fa-sm, fa-lg, fa-1x, fa-2x">
-        <p> Formas de pagamento</p>
-        <i class="fab fa-cc-visa text-primary"></i> 
-        <i class="fab fa-cc-mastercard text-success"></i> 
-        <i class="fab fa-cc-paypal text-warning"></i> 
-        <i class="fab fa-cc-diners-club text-info"></i> 
-        <i class="fab fa-cc-discover text-info"></i>
-    </section>
-      
+    <p> Formas de pagamento</p>
+    <i class="fab fa-cc-visa text-primary"></i>
+    <i class="fab fa-cc-mastercard text-success"></i>
+    <i class="fab fa-cc-paypal text-warning"></i>
+    <i class="fab fa-cc-diners-club text-info"></i>
+    <i class="fab fa-cc-discover text-info"></i>
   </section>
 
- 
-  <footer >
-    
-      &copy; 2023 - Todos os direitos reservados.
+  </section>
+
+
+  <footer>
+
+    &copy; 2023 - Todos os direitos reservados.
     </div>
   </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>

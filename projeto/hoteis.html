@@ -1,19 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="../projeto/style.css"> 
+  <link rel="stylesheet" href="../projeto/css/style.css">
   <title>Buscadores de Aventuras</title>
 </head>
+
 <body>
   <!-- Barra de menu -->
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="#">
+        <img src="../projeto/images/logotipo.jpg" alt="Logotipo da Sua Empresa">
+      </a>
+      <button class="btn btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+        aria-controls="offcanvasRight">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -34,130 +39,174 @@
       </div>
     </div>
   </nav>
+  <!-- Menu Lateral (Offcanvas) -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasRightLabel">Menu</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link" href="../projeto/index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../projeto/passagens.html">Passagens</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../projeto/hoteis.html">Hotéis</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../projeto/contato.html">Contato</a>
+        </li>
+      </ul>
+    </div>
+  </div>
   <div>
     <img src="../projeto/images/hotel-gf5de4c99a_1280.jpg" alt="Imagem" class=" custom-img">
   </div>
-    <div class="container mt-5">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="card p-4">
-              <h5 class="card-title text-center mb-4">Dados da Viagem</h5>
-              <form class="form">
-                <div class="form-group">
-                  <label for="destino">Destino:</label>
-                  <input type="text" class="form-control" id="destino" placeholder="Informe o destino">
-                </div>
-                <div class="form-group">
-                  <label for="dataEntrada">Data de Entrada:</label>
-                  <input type="date" class="form-control" id="dataEntrada">
-                </div>
-                <div class="form-group">
-                  <label for="dataSaida">Data de Saída:</label>
-                  <input type="date" class="form-control" id="dataSaida">
-                </div>
-                <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label for="quantidadeAdultos">Adultos:</label>
-                    <input type="number" class="form-control" id="quantidadeAdultos">
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="quantidadeCriancas">Crianças:</label>
-                    <input type="number" class="form-control" id="quantidadeCriancas">
-                  </div>
-                </div>
-                <button type="submit" class="btn btn-primary btn-block">Buscar</button>
-              </form>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card p-4">
+          <h5 class="card-title text-center mb-4"> Hospedagem</h5>
+          <form class="form">
+            <div class="form-group">
+              <label for="hotel">Hotel:</label>
+              <input type="text" class="form-control" id="hotel" placeholder="Informe o nome do hotel">
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="info-container">
-              <i class="fas fa-hotel hotel-icon"></i>
-              <span>Hospedagens</span>
-              <p>Aproveite nossas ofertas</p>
-              <p class="hotel-text">Encontre as melhores opções de hospedagem para a sua viagem!</p>
-              
+            <div class="form-group">
+              <label for="categoria">Categoria:</label>
+              <select class="form-control" id="categoria">
+                <option value="1">Categoria 1</option>
+                <option value="2">Categoria 2</option>
+                <option value="3">Categoria 3</option>
+                <option value="4">Categoria 4</option>
+                <option value="5">Categoria 5</option>
+              </select>
             </div>
-          </div>
+            <div class="form-group">
+              <label for="preco">Preço por Noite:</label>
+              <input type="number" class="form-control" id="preco" placeholder="Informe o preço por noite">
+            </div>
+            <div class="form-group">
+              <label for="cep">CEP:</label>
+              <input type="text" class="form-control" id="cep" placeholder="Informe o CEP do hotel">
+            </div>
+            <div class="form-group">
+              <label for="rua">Rua:</label>
+              <input type="text" class="form-control" id="rua" placeholder="Informe a rua do hotel">
+            </div>
+            <div class="form-group">
+              <label for="telefone">Telefone:</label>
+              <input type="text" class="form-control" id="telefone" placeholder="Informe o telefone do hotel">
+            </div>
+            <div class="form-group">
+              <label for="bairro">Bairro:</label>
+              <input type="text" class="form-control" id="bairro" placeholder="Informe o bairro do hotel">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Buscar</button>
+          </form>
         </div>
       </div>
-    <div class="container mt-5">
-        <div class="col-12 text-left"><h3>Hotéis e Resorts</h3></div>
-        
-        <div class="card-group">
-          <div class="card">
-            <p class="card-title">Rio de Janeiro </p>
-            <p class="card-subtitle">Hotel Golden</p>
-            <div class="star">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-            
-            <img src="../projeto/images/hotel-g19bb9df6a_1280.jpg" class="card-img-top" alt="Imagem 1">
-            <div class="card-body">
-              <p class="card-text">Bem-vindo ao nosso hotel de cinco estrelas, onde o luxo se encontra com o conforto. você vai se sentir em casa. Reserve agora e deixe-nos cuidar de todos os detalhes para que você tenha uma estadia inesquecível.</p>
-            </div>
-            <button type="submit" class="btn btn-success">Fazer Reserva</button>
-          </div>
-          <div class="card">
-            <p class="card-title">Porto Seguro </p>
-            <p class="card-subtitle">Hotel Fenix </p>
-            <div class="star">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half"></i>
-              </div>
-            <img src="../projeto/images/hotel-gdda6017f6_1280.jpg" class="card-img-top" alt="Imagem 2">
-            <div class="card-body">
-              <p class="card-text">  Está planejando uma viagem em família? Temos o local perfeito para vocês! Piscina, atividades recreativas e um ambiente seguro para as crianças garantirão a felicidade de todos. Reserve agora e crie laços inquebráveis em suas férias. </p>
-            </div>
-            <button type="submit" class="btn btn-success">Fazer Reserva</button>
-          </div>
-        </div>
-        <div class="card-group mt-3">
-          <div class="card">
-            <p class="card-title">Gramado </p>
-            <p class="card-subtitle">Hotel Vivenda dos Sonhos</p>
-            <div class="star">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half"></i>
-              </div>
-            <img src="../projeto/images/hotel-room-g2624a1fb8_1280.jpg" class="card-img-top" alt="Imagem 3">
-            <div class="card-body">
-              <p class="card-text">Escapada Romântica dos Sonhos Surpreenda o seu amor com uma escapada romântica em nosso hotel exclusivo. Quartos com vista para o mar, jantares à luz de velas. </p>
-            </div>
-            <button type="submit" class="btn  btn-success">Fazer Reserva</button>
-          </div>
-          <div class="card">
-            <p class="card-title">Brasília </p>
-            <p class="card-subtitle">Hotel Royal Tulip</p>
-            <div class="star">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half"></i>
-              </div>
-            <img src="../projeto/images/dominicana-g922187425_1280.jpg" class="card-img-top" alt="Imagem 4">
-            <div class="card-body">
-              <p class="card-text">Seja aventureiro durante o dia e relaxe à noite em nosso hotel único. Com acesso fácil a trilhas deslumbrantes, esportes radicais e atividades ao ar livre, você encontrará emoção a cada passo.</p>
-            </div>
-            <button type="submit" class="btn  btn-success">Fazer Reserva</button>
-          </div>
+      <div class="col-md-6">
+        <div class="info-container">
+          <i class="fas fa-hotel hotel-icon"></i>
+          <span>Hospedagens</span>
+          <p>Aproveite nossas ofertas</p>
+          <p class="hotel-text">Encontre as melhores opções de hospedagem para a sua viagem!</p>
         </div>
       </div>
     </div>
   </div>
-<footer class="mt-3">
+
+  <div class="container mt-5">
+    <div class="col-12 text-left">
+      <h3>Hotéis e Resorts</h3>
+    </div>
+
+    <div class="card-group">
+      <div class="card">
+        <p class="card-title">Rio de Janeiro </p>
+        <p class="card-subtitle">Hotel Golden</p>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+
+        <img src="../projeto/images/hotel-g19bb9df6a_1280.jpg" class="card-img-top" alt="Imagem 1">
+        <div class="card-body">
+          <p class="card-text">Bem-vindo ao nosso hotel de cinco estrelas, onde o luxo se encontra com o conforto. você
+            vai se sentir em casa. Reserve agora e deixe-nos cuidar de todos os detalhes para que você tenha uma estadia
+            inesquecível.</p>
+        </div>
+        <button type="submit" class="btn btn-success">Fazer Reserva</button>
+      </div>
+      <div class="card">
+        <p class="card-title">Porto Seguro </p>
+        <p class="card-subtitle">Hotel Fenix </p>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half"></i>
+        </div>
+        <img src="../projeto/images/hotel-gdda6017f6_1280.jpg" class="card-img-top" alt="Imagem 2">
+        <div class="card-body">
+          <p class="card-text"> Está planejando uma viagem em família? Temos o local perfeito para vocês! Piscina,
+            atividades recreativas e um ambiente seguro para as crianças garantirão a felicidade de todos. Reserve agora
+            e crie laços inquebráveis em suas férias. </p>
+        </div>
+        <button type="submit" class="btn btn-success">Fazer Reserva</button>
+      </div>
+    </div>
+    <div class="card-group mt-3">
+      <div class="card">
+        <p class="card-title">Gramado </p>
+        <p class="card-subtitle">Hotel Vivenda dos Sonhos</p>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half"></i>
+        </div>
+        <img src="../projeto/images/hotel-room-g2624a1fb8_1280.jpg" class="card-img-top" alt="Imagem 3">
+        <div class="card-body">
+          <p class="card-text">Escapada Romântica dos Sonhos Surpreenda o seu amor com uma escapada romântica em nosso
+            hotel exclusivo. Quartos com vista para o mar, jantares à luz de velas. </p>
+        </div>
+        <button type="submit" class="btn  btn-success">Fazer Reserva</button>
+      </div>
+      <div class="card">
+        <p class="card-title">Brasília </p>
+        <p class="card-subtitle">Hotel Royal Tulip</p>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half"></i>
+        </div>
+        <img src="../projeto/images/dominicana-g922187425_1280.jpg" class="card-img-top" alt="Imagem 4">
+        <div class="card-body">
+          <p class="card-text">Seja aventureiro durante o dia e relaxe à noite em nosso hotel único. Com acesso fácil a
+            trilhas deslumbrantes, esportes radicais e atividades ao ar livre, você encontrará emoção a cada passo.</p>
+        </div>
+        <button type="submit" class="btn  btn-success">Fazer Reserva</button>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  <footer class="mt-3">
     &copy; 2023 - Todos os direitos reservados.
-</footer>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  </footer>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

@@ -19,8 +19,15 @@ h1{
 }
 
 nav{
-   
-     background-color: rgba(121, 24, 129, 0.877);
+  margin-bottom: 2px;
+   background-color:#791881
+}
+
+.navbar-brand {
+  width: 70px; 
+  height:auto;
+ 
+
 }
 
 main {
@@ -218,4 +225,134 @@ header,footer {
     font-family:'Poppins', sans-serif;
     color: #5a5151;
   }
+    /* Cadastro */
+    #main-contain{
+    
+    }
   
+    #register-form input, label{
+      display: block;
+      width: 100%;
+      
+      }
+    #register-form label{
+      color: #fff;
+      font-weight: bold;
+      font-size: .8rem;
+    }
+    #register-form input{
+      color: #fff;
+      background-color: #5f46a3e1;
+      border-bottom: 2px solid #fff;
+      padding: 10px;
+      font-size: .9rem;
+      margin-bottom: 40px;
+    }
+    #register-form input:focus{
+      border-color: #62CACA;
+    }
+    #register-form input[type="submit"]{
+      background-color: #62CACA;
+      border: none;
+      border-radius: 20px;
+      height: 40px;
+      cursor: pointer;
+    }
+    #register-form #agreement {
+      margin-right: 5px;
+    }
+    #register-form #agreement, #agreement-label{
+      display: inline-block;
+      width: auto;
+    }
+    #register-form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      
+    }
+  
+    #register-form input:focus, label:focus{
+      outline: none;
+    }
+    #register-form a{
+    color: #62caca;
+  
+    }
+    #main-container{
+      width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #542d9c96;
+      padding: 25px;
+      border-radius: 2px;
+      
+    }
+  
+    #main-container h1{
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 1.6rem;
+      color: #fff;
+      font-weight: bold ;
+    }
+  
+   .full-box{
+      flex: 1 1 100%;
+      position: relative;
+    }
+  
+    .half-box{
+      flex: 1 1 45%;
+      position: relative;
+    }
+    .spacing{
+      margin-right: 2.5%;
+  
+    }
+/* menu lateral */
+.offcanvas{
+  background-color:rgb(225, 236, 245);
+  
+}
+
+#signup-btn{
+ 
+}
+
+/* styles.css */
+
+/* Animação de rotação para estrelas */
+.star i:hover {
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Animação de aumento de tamanho para os cartões */
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card-group.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* */
+/* styles.css */
+
+/* Classe para elementos que deslizarão */
+.slide-in {
+  transform: translateY(50px); /* Comece a 50px abaixo da posição original */
+  opacity: 0; /* Comece invisível */
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Adicione uma transição suave */
+}
+
+/* Classe para ativar a animação */
+.slide-in-active {
+  transform: translateY(0); /* Deslize para a posição original */
+  opacity: 1; /* Torne o elemento visível */
+}

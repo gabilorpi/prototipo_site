@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../projeto/css/style.css">
+
+    <title>Buscadores de Aventuras</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <button class="btn btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight">
+                Menu
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../projeto/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../projeto/passagens.html">Passagens</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../projeto/hoteis.html">Hotéis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../projeto/contato.html">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <form class="d-flex">
+            <button id="signup-btn" type="button" class="btn btn-primary ml-2"><a
+                    href="cadastros.html">Cadastrar</a></button>
+            <button class="btn ml-2" type="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#4654A3"
+                    class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                    <path fill-rule="evenodd"
+                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                </svg>
+            </button>
+        </form>
+        </div>
+        </div>
+    </nav>
+    <main class="container" id="main-container">
+        <h1>Cadastre-se</h1>
+
+        <div class="container">
+            <form id="register-form">
+                <div class="input-group">
+                    <div class="half-box spacing">
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" id="email" placeholder="Digite seu e-mail!">
+                    </div>
+                    <div class="half-box">
+                        <label for="email-confirm">Confirmar E-mail</label>
+                        <input type="email" name="email-confirm" id="email-confirm" placeholder="Confirme seu e-mail!">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="full-box">
+                        <label for="name">Nome</label>
+                        <input type="text" name="name" id="name" placeholder="Digite seu nome!">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="half-box">
+                        <label for="phone-number">Telefone</label>
+                        <input type="text" name="phone-number" id="phone-number" placeholder="Digite seu telefone!">
+                    </div>
+                    <div class="half-box">
+                        <label for="register-number">CPF/CNPJ</label>
+                        <input type="text" name="register-number" id="register-number"
+                            placeholder="Digite seu CPF ou CNPJ">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="">Endereço:</label>
+                    <div class="full-box">
+                        <label for="zip-code">CEP</label>
+                        <input type="text" name="zip-code" id="zip-code" placeholder="Digite seu CEP">
+                    </div>
+                    <div class="full-box">
+                        <label for="street">Rua</label>
+                        <input type="text" name="street" id="street" placeholder="Digite a rua">
+                    </div>
+                    <div class="half-box">
+                        <label for="adress-number">Número</label>
+                        <input type="text" name="adress-number" id="adress-number"
+                            placeholder="Digite o número da residência">
+                    </div>
+                    <div class="half-box">
+                        <label for="neighborhood">Bairro</label>
+                        <input type="text" name="neighborhood" id="neighborhood" placeholder="Digite o bairro">
+                    </div>
+                    <div class="half-box">
+                        <label for="city-name">Cidade</label>
+                        <input type="text" name="city-name" id="city-name" placeholder="Digite a cidade">
+                    </div>
+                    <div class="half-box">
+                        <label for="state-name">Estado</label>
+                        <input type="text" name="state-name" id="state-name" placeholder="Digite o Estado">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="half-box spacing">
+                        <label for="password">Senha</label>
+                        <input type="password" name="password" id="password" placeholder="Digite sua senha">
+                    </div>
+                    <div class="half-box">
+                        <label for="password-confirm">Confirmar Senha</label>
+                        <input type="password" name="password-confirm" id="password-confirm"
+                            placeholder="Confirme sua senha">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <input type="checkbox" name="agreement" id="agreement">
+                    <label for="agreement" id="agreement-label">Li e aceito os <a href="#"> termos e condições de
+                            uso</a></label>
+                </div>
+                <div class="input-group">
+                    <input type="submit" id="submit-btn" value="Cadastrar">
+                </div>
+            </form>
+        </div>
+    </main>
+
+
+    <!-- Menu Lateral (Offcanvas) -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="../projeto/index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../projeto/passagens.html">Passagens</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../projeto/hoteis.html">Hotéis</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../projeto/contato.html">Contato</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <footer class="mt-3">
+        &copy; 2023 - Todos os direitos reservados.
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
