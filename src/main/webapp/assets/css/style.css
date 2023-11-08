@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background-color: #f2f2f2;
+    
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+    font-family: sans-serif;
+    font-size: 22px;
+    text-align: right; 
+}
+
+nav{
+  margin-bottom: 2px;
+   background-color:#791881
+}
+
+.navbar-brand {
+  width: 70px; 
+  height:auto;
+ 
+
+}
+
+main {
+    width: 100%;
+}
+
+section {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.limita-area {
+    max-width: 1024px;
+}
+
+img:first-child {
+    width: 100%; 
+}
+
+h2 {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 25px;
+}
+
+p {
+    line-height: 32px;
+}
+
+p:last-child {
+    display: inline;
+   
+    padding: 10px 5px;
+}
+
+.mais-informacoes {
+    display: block;
+    margin: 25px 0;
+    font-weight: bold;
+    padding-left: 10px;
+    border-left: 2px solid rgba(121, 24, 129, 0.877);
+}
+
+.destinos-avaliados.meu-site{
+    width: 100%;
+    display: flex;
+    margin: 25px 0px;
+    overflow-x: scroll;
+}
+.destinos-avaliados.meu-site figcaption, figure img {
+  width: 350px;
+}
+
+.destinos-avaliados.meu-site figure {
+    display: flex;
+    flex-direction:column;
+    margin: 5px 10px;
+   
+}
+
+.destinos-avaliados.meu-site figcaption, figure span {
+    margin: 12px 0;
+    padding: 12px 5px;
+    text-align: center;
+    color:white;
+    background:rgba(121, 24, 129, 0.877);
+}
+
+header,footer {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(121, 24, 129, 0.877);
+  color: #ffffff;
+  box-sizing: border-box;
+}
+.row{
+    width: left 13rem;
+}
+
+
+.custom-img {
+    max-height: 480px; /* Defina a altura desejada para a imagem */
+  }
+
+  .card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  label {
+    font-size: 16px;
+    color: #666;
+  }
+
+  input[type="text"],
+  input[type="date"],
+  input[type="number"] {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px 12px;
+    width: 100%;
+  }
+
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+  }
+
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  /* Estilos para o texto e ícone de hospedagem */
+  .info-container {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 40px;
+  }
+
+  .hotel-icon {
+    font-size: 48px;
+    color: #007bff;
+    margin-bottom: 18px;
+  }
+
+  .hotel-text {
+    font-size: 40px;
+    font-family:'Poppins', sans-serif;
+    color: #5a5151;
+  }
+  .star {
+    color: gold; /* Define a cor das estrelas (dourado) */
+    font-size: 12px; /* Define o tamanho das estrelas */
+    margin-bottom: 8px;
+  }
+
+  div.card{
+    padding: 16px !important;
+    border-radius: 9px !important;
+  }
+
+  .card-group{
+    column-gap: 24px;
+  }
+
+  .card-text{
+    font-size: 0.8em;
+    color: gray;
+    padding: 0px !important;
+    line-height: 8px;
+    text-align: justify-all;
+  }
+ 
+  .form-container {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+ 
+  .form-group label {
+    font-weight: bold;
+  }
+  .form-control {
+    border-radius: 4px;
+  }
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+  }
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  .icons{
+    padding: 5px;
+    color:rgb(20, 57, 104);
+    text-align: center;
+  }
+
+  .voos-text {
+    font-size: 18px;
+    font-family:'Poppins', sans-serif;
+    color: #5a5151;
+  }
+    /* Cadastro */
+    #main-contain{
+    
+    }
+  
+    #register-form input, label{
+      display: block;
+      width: 100%;
+      
+      }
+    #register-form label{
+      color: #fff;
+      font-weight: bold;
+      font-size: .8rem;
+    }
+    #register-form input{
+      color: #fff;
+      background-color: #5f46a3e1;
+      border-bottom: 2px solid #fff;
+      padding: 10px;
+      font-size: .9rem;
+      margin-bottom: 40px;
+    }
+    #register-form input:focus{
+      border-color: #62CACA;
+    }
+    #register-form input[type="submit"]{
+      background-color: #62CACA;
+      border: none;
+      border-radius: 20px;
+      height: 40px;
+      cursor: pointer;
+    }
+    #register-form #agreement {
+      margin-right: 5px;
+    }
+    #register-form #agreement, #agreement-label{
+      display: inline-block;
+      width: auto;
+    }
+    #register-form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      
+    }
+  
+    #register-form input:focus, label:focus{
+      outline: none;
+    }
+    #register-form a{
+    color: #62caca;
+  
+    }
+    #main-container{
+      width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #542d9c96;
+      padding: 25px;
+      border-radius: 2px;
+      
+    }
+  
+    #main-container h1{
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 1.6rem;
+      color: #fff;
+      font-weight: bold ;
+    }
+  
+   .full-box{
+      flex: 1 1 100%;
+      position: relative;
+    }
+  
+    .half-box{
+      flex: 1 1 45%;
+      position: relative;
+    }
+    .spacing{
+      margin-right: 2.5%;
+  
+    }
+/* menu lateral */
+.offcanvas{
+  background-color:rgb(225, 236, 245);
+  
+}
+
+#signup-btn{
+ 
+}
+
+/* styles.css */
+
+/* Animação de rotação para estrelas */
+.star i:hover {
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Animação de aumento de tamanho para os cartões */
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card-group.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* */
+/* styles.css */
+
+/* Classe para elementos que deslizarão */
+.slide-in {
+  transform: translateY(50px); /* Comece a 50px abaixo da posição original */
+  opacity: 0; /* Comece invisível */
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Adicione uma transição suave */
+}
+
+/* Classe para ativar a animação */
+.slide-in-active {
+  transform: translateY(0); /* Deslize para a posição original */
+  opacity: 1; /* Torne o elemento visível */
+}
+
+ 
